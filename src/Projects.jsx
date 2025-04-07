@@ -28,7 +28,7 @@ function Projects() {
       <h1 className="mt-48 font-bold text-6xl ml-16">Projects</h1>
       <hr className="border-1 border-gray-500 mt-8" />
       <div className="mt-8">
-        <div className="flex justify-around items-center">
+        <div className="flex flex-col md:flex-row gap-16 justify-around items-center">
           {[1, 2].map((proj, i) => (
             <motion.div
               custom={i}
@@ -36,7 +36,7 @@ function Projects() {
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
               key={i}
-              className="w-1/3 p-4 bg-gray-400 rounded-lg shadow-lg"
+              className="w-1/3 p-4  bg-gray-400 rounded-lg shadow-lg"
             >
               <h2 className="text-2xl font-bold text-gray-100">
                 Project {proj}
